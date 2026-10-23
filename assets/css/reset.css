@@ -1,0 +1,257 @@
+/*==========================================================
+    RESET.CSS
+    Restaurante Bar Battiato
+==========================================================*/
+
+/*==========================
+    RESET GENERAL
+==========================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*==========================
+    HTML
+==========================*/
+
+html{
+    font-size:16px;
+    scroll-behavior:smooth;
+}
+
+/*==========================
+    BODY
+==========================*/
+
+body{
+
+    font-family:var(--font-text);
+
+    font-size:var(--fs-body);
+
+    line-height:var(--line-height-text);
+
+    color:var(--color-white);
+
+    background:var(--background-body);
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+    text-rendering:optimizeLegibility;
+
+}
+
+/*==========================
+    CONTENEDOR DE IMÁGENES
+==========================*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+/*==========================
+    ENLACES
+==========================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition-normal);
+
+}
+
+/*==========================
+    LISTAS
+==========================*/
+
+ul,
+ol{
+
+    list-style:none;
+
+}
+
+/*==========================
+    BOTONES
+==========================*/
+
+button{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/*==========================
+    INPUTS
+==========================*/
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    outline:none;
+
+    border:none;
+
+}
+
+/*==========================
+    TEXTAREA
+==========================*/
+
+textarea{
+
+    resize:none;
+
+}
+
+/*==========================
+    TABLAS
+==========================*/
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+/*==========================
+    TÍTULOS
+==========================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--font-title);
+
+    font-weight:600;
+
+    line-height:1.2;
+
+}
+
+/*==========================
+    PÁRRAFOS
+==========================*/
+
+p{
+
+    color:var(--color-gray);
+
+}
+
+/*==========================
+    SELECCIÓN
+==========================*/
+
+::selection{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+}
+
+/*==========================
+    SCROLLBAR
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:var(--scroll-width);
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--scroll-track);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--scroll-thumb);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--scroll-thumb-hover);
+
+}
+
+/*==========================
+    UTILIDADES
+==========================*/
+
+.container{
+
+    width:min(100%, var(--container-width));
+
+    margin:auto;
+
+    padding-inline:var(--container-padding);
+
+}
+
+.section{
+
+    padding:var(--section-padding) 0;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}

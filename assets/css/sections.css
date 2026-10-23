@@ -1,0 +1,1252 @@
+/*==========================================================
+    SECTIONS.CSS
+    Restaurante Bar Battiato
+==========================================================*/
+
+/*==========================
+    HERO
+==========================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:url("../img/hero/hero.webp") center center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--gradient-overlay);
+
+}
+
+.hero__container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero__content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.hero__logo{
+
+    width:180px;
+
+    margin:0 auto 30px;
+
+}
+
+.hero__subtitle{
+
+    display:block;
+
+    color:var(--color-primary);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.hero__title{
+
+    font-size:var(--fs-display);
+
+    margin-bottom:30px;
+
+    color:var(--color-white);
+
+}
+
+.hero__text{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+}
+
+.hero__buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero__scroll{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:70px;
+
+    color:var(--color-primary);
+
+    font-size:2rem;
+
+}
+
+/*==========================
+    SECTION HEADER
+==========================*/
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-header__subtitle{
+
+    display:block;
+
+    color:var(--color-primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+
+}
+
+.section-header__title{
+
+    margin-bottom:20px;
+
+}
+
+.section-header__description{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*==========================
+    NOSOTROS
+==========================*/
+
+.about__grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.about__grid > *{
+
+    min-width:0;
+
+}
+
+.about__image img{
+
+    border-radius:var(--radius-large);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+.about__content h3{
+
+    margin-bottom:25px;
+
+}
+
+.about__content p{
+
+    margin-bottom:20px;
+
+}
+
+/*==========================
+    GASTRONOMÍA / MENÚ POR PESTAÑAS
+==========================*/
+
+.menu-tabs__nav{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+}
+
+.menu-tabs__btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 26px;
+
+    border-radius:var(--button-radius);
+
+    background:var(--background-card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:var(--color-gray);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    text-transform:uppercase;
+
+    transition:var(--transition-normal);
+
+}
+
+.menu-tabs__btn i{
+
+    color:var(--color-primary);
+
+}
+
+.menu-tabs__btn:hover{
+
+    border-color:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+.menu-tabs__btn.is-active{
+
+    background:var(--gradient-primary);
+
+    border-color:transparent;
+
+    color:var(--color-black);
+
+}
+
+.menu-tabs__btn.is-active i{
+
+    color:var(--color-black);
+
+}
+
+.menu-tabs__panels{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.menu-tabs__panel{
+
+    width:100%;
+
+    max-width:900px;
+
+    border-radius:var(--radius-medium);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-large);
+
+    background:var(--background-card);
+
+}
+
+.menu-tabs__panel img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    cursor:zoom-in;
+
+    transition:var(--transition-normal);
+
+}
+
+.menu-tabs__panel img:hover{
+
+    opacity:.92;
+
+}
+
+/* Variante clara, para usarse sobre fondos oscuros con overlay */
+
+.menu-tabs--light .menu-tabs__btn{
+
+    background:rgba(255,255,255,.06);
+
+}
+
+/*==========================
+    LISTA DE PRECIOS DINÁMICA
+    (se llena desde MySQL, ver
+    includes/menu-data.php)
+==========================*/
+
+.menu-pricelist{
+
+    padding:30px 35px 35px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.menu-pricelist__title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-family:var(--font-title);
+
+    font-size:1.2rem;
+
+    color:var(--color-primary);
+
+    margin-bottom:18px;
+
+}
+
+.menu-pricelist__group{
+
+    color:var(--color-primary);
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    margin:18px 0 8px;
+
+}
+
+.menu-pricelist__group:first-of-type{
+
+    margin-top:0;
+
+}
+
+.menu-pricelist__items{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.menu-pricelist__items li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:baseline;
+
+    gap:20px;
+
+    padding:10px 0;
+
+    border-bottom:1px dashed rgba(255,255,255,.08);
+
+}
+
+.menu-pricelist__items li:last-child{
+
+    border-bottom:none;
+
+}
+
+.menu-pricelist__name{
+
+    color:var(--color-white);
+
+    font-size:.92rem;
+
+}
+
+.menu-pricelist__name em{
+
+    color:var(--color-gray-dark);
+
+    font-style:normal;
+
+    font-size:.8rem;
+
+}
+
+.menu-pricelist__price{
+
+    color:var(--color-primary);
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+/* Variante para sabores de pizza: sin precio individual */
+
+.menu-pricelist--flavors .menu-pricelist__items--flavors li{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:2px;
+
+}
+
+.menu-pricelist__desc{
+
+    color:var(--color-gray-dark);
+
+    font-size:.82rem;
+
+}
+
+/*==========================
+    TAMAÑOS Y PRECIOS
+==========================*/
+
+.price-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:20px;
+
+    margin:50px 0;
+
+}
+
+.price-grid > *{
+
+    min-width:0;
+
+}
+
+.price-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:30px 15px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius-medium);
+
+    transition:var(--transition-normal);
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--color-primary);
+
+}
+
+.price-card__size{
+
+    font-family:var(--font-title);
+
+    font-size:1.3rem;
+
+    color:var(--color-white);
+
+}
+
+.price-card__size em{
+
+    font-style:normal;
+
+    color:var(--color-primary);
+
+}
+
+.price-card__price{
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+}
+
+/*==========================
+    PIZZA PLAZZA
+==========================*/
+
+.pizza{
+
+    position:relative;
+
+    background:var(--gradient-dark);
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.pizza .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.pizza__content{
+
+    max-width:750px;
+
+    margin:0 auto;
+
+}
+
+.pizza__logo{
+
+    width:170px;
+
+    margin:0 auto 25px;
+
+}
+
+.pizza h2{
+
+    margin-bottom:25px;
+
+}
+
+.pizza p{
+
+    max-width:700px;
+
+    margin:0 auto 35px;
+
+}
+
+.pizza__cta{
+
+    margin-top:50px;
+
+}
+
+/*==========================
+    GALERÍA — CARRUSEL
+==========================*/
+
+.gallery__carousel-wrap{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.gallery__carousel{
+
+    display:flex;
+
+    gap:20px;
+
+    flex:1;
+
+    min-width:0;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:x mandatory;
+
+    padding:6px 4px 16px;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:var(--color-primary) transparent;
+
+}
+
+.gallery__carousel::-webkit-scrollbar{
+
+    height:6px;
+
+}
+
+.gallery__carousel::-webkit-scrollbar-thumb{
+
+    background:var(--color-primary);
+
+    border-radius:10px;
+
+}
+
+.gallery__slide{
+
+    position:relative;
+
+    flex:0 0 auto;
+
+    width:270px;
+
+    height:340px;
+
+    overflow:hidden;
+
+    border-radius:var(--radius-medium);
+
+    cursor:pointer;
+
+    scroll-snap-align:start;
+
+}
+
+.gallery__slide img{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+}
+
+.gallery__slide:hover img,
+.gallery__slide:focus-visible img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(16,16,16,0);
+
+    color:var(--color-white);
+
+    font-size:1.4rem;
+
+    opacity:0;
+
+    transition:var(--transition-normal);
+
+}
+
+.gallery__slide:hover .gallery__overlay,
+.gallery__slide:focus-visible .gallery__overlay{
+
+    background:rgba(16,16,16,.45);
+
+    opacity:1;
+
+}
+
+.gallery__overlay i{
+
+    transform:scale(.7);
+
+    transition:var(--transition-normal);
+
+}
+
+.gallery__slide:hover .gallery__overlay i,
+.gallery__slide:focus-visible .gallery__overlay i{
+
+    transform:scale(1);
+
+}
+
+.gallery__slide:focus-visible{
+
+    outline:2px solid var(--color-primary);
+
+    outline-offset:3px;
+
+}
+
+.gallery__carousel-btn{
+
+    flex-shrink:0;
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--background-card);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:var(--color-white);
+
+    font-size:1.1rem;
+
+    transition:var(--transition-normal);
+
+}
+
+.gallery__carousel-btn:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+    border-color:transparent;
+
+}
+
+/*==========================
+    GALERÍA — LIGHTBOX / PASARELA
+==========================*/
+
+.gallery-lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:var(--z-modal);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    padding:30px 90px;
+
+    background:rgba(8,8,8,.96);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition-normal);
+
+}
+
+.gallery-lightbox.is-open{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.gallery-lightbox__stage{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    max-width:1100px;
+
+    flex:1;
+
+    min-height:0;
+
+}
+
+.gallery-lightbox__img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    border-radius:var(--radius-medium);
+
+    box-shadow:var(--shadow-large);
+
+    object-fit:contain;
+
+}
+
+.gallery-lightbox__counter{
+
+    position:absolute;
+
+    bottom:-34px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:var(--color-gray-dark);
+
+    font-size:.85rem;
+
+    letter-spacing:1px;
+
+}
+
+.gallery-lightbox__close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:30px;
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--color-white);
+
+    font-size:1.4rem;
+
+    transition:var(--transition-normal);
+
+}
+
+.gallery-lightbox__close:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+}
+
+.gallery-lightbox__arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:54px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--color-white);
+
+    font-size:1.3rem;
+
+    transition:var(--transition-normal);
+
+    z-index:2;
+
+}
+
+.gallery-lightbox__arrow:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+}
+
+.gallery-lightbox__arrow--prev{left:20px;}
+.gallery-lightbox__arrow--next{right:20px;}
+
+.gallery-lightbox__thumbs{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+.gallery-lightbox__thumb{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    border:2px solid transparent;
+
+    opacity:.5;
+
+    transition:var(--transition-normal);
+
+    flex-shrink:0;
+
+}
+
+.gallery-lightbox__thumb img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.gallery-lightbox__thumb:hover{
+
+    opacity:.85;
+
+}
+
+.gallery-lightbox__thumb.is-active{
+
+    opacity:1;
+
+    border-color:var(--color-primary);
+
+}
+
+/*==========================
+    UBICACIÓN
+==========================*/
+
+.location__grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+}
+
+.location__grid > *{
+
+    min-width:0;
+
+}
+
+.info-card{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-radius:var(--radius-medium);
+
+    background:var(--background-card);
+
+}
+
+.info-card i{
+
+    font-size:1.6rem;
+
+    color:var(--color-primary);
+
+}
+
+.location__map{
+
+    min-height:450px;
+
+}
+
+.map-placeholder{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:var(--background-card);
+
+    border-radius:var(--radius-large);
+
+}
+
+.map-placeholder i{
+
+    font-size:3rem;
+
+    color:var(--color-primary);
+
+    margin-bottom:20px;
+
+}
+
+/*==========================
+    CONTACTO
+==========================*/
+
+.contact{
+
+    text-align:center;
+
+}
+
+.contact__box{
+
+    max-width:800px;
+
+    margin:auto;
+
+    background:var(--background-card);
+
+    padding:70px;
+
+    border-radius:var(--radius-large);
+
+}
+
+.contact__box h2{
+
+    margin:20px 0;
+
+}
+
+.contact__box p{
+
+    margin-bottom:40px;
+
+}
+
+/*==========================
+    FOOTER
+==========================*/
+
+.footer__grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+}
+
+.footer__grid > *{
+
+    min-width:0;
+
+}
+
+.footer__brand img{
+
+    width:120px;
+
+    margin-bottom:25px;
+
+}
+
+.footer__column h3{
+
+    margin-bottom:25px;
+
+    color:var(--color-primary);
+
+}
+
+.footer__column ul li{
+
+    margin-bottom:15px;
+
+}
+
+.footer__column a:hover{
+
+    color:var(--color-primary);
+
+}
+
+.footer__social{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.footer__social a{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--background-card);
+
+    transition:var(--transition-normal);
+
+}
+
+.footer__social a:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+}
+
+.footer__divider{
+
+    margin:50px 0 30px;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer__bottom{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    color:var(--color-gray-dark);
+
+    font-size:.9rem;
+
+}

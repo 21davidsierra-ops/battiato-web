@@ -1,0 +1,531 @@
+/*==========================================================
+    ADMIN.CSS
+    Panel de Administración — Restaurante Bar Battiato
+    Reutiliza la paleta del sitio público.
+==========================================================*/
+
+:root{
+
+    --color-primary:#BE9B59;
+    --color-primary-light:#D7BB83;
+    --color-black:#101010;
+    --color-dark:#181818;
+    --color-card:#1D1D1D;
+    --color-white:#FFFFFF;
+    --color-gray:#D6D6D6;
+    --color-gray-dark:#8A8A8A;
+    --color-danger:#C0392B;
+    --color-success:#25D366;
+
+    --radius:12px;
+    --transition:.25s ease;
+
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+
+    font-family:'Segoe UI', Poppins, Arial, sans-serif;
+
+    background:var(--color-black);
+
+    color:var(--color-white);
+
+    line-height:1.5;
+
+}
+
+a{color:inherit;text-decoration:none;}
+
+/*==========================
+    LOGIN / SETUP
+==========================*/
+
+.admin-auth-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+.admin-auth-box{
+
+    width:100%;
+
+    max-width:380px;
+
+    background:var(--color-card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius);
+
+    padding:40px 30px;
+
+}
+
+.admin-auth-box h1{
+
+    font-size:1.4rem;
+
+    margin-bottom:6px;
+
+    text-align:center;
+
+}
+
+.admin-auth-subtitle{
+
+    text-align:center;
+
+    color:var(--color-primary);
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+}
+
+.admin-auth-box form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:10px;
+
+}
+
+.admin-auth-box label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    font-size:.85rem;
+
+    color:var(--color-gray);
+
+}
+
+/*==========================
+    FORMULARIOS (general)
+==========================*/
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="search"],
+textarea,
+select{
+
+    padding:12px 14px;
+
+    border-radius:8px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:var(--color-dark);
+
+    color:var(--color-white);
+
+    font-size:.95rem;
+
+    font-family:inherit;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:var(--color-primary);
+
+}
+
+textarea{resize:vertical;min-height:80px;}
+
+/*==========================
+    BOTONES
+==========================*/
+
+.admin-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:11px 22px;
+
+    border-radius:8px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border:1px solid transparent;
+
+    transition:var(--transition);
+
+}
+
+.admin-btn--primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-black);
+
+}
+
+.admin-btn--primary:hover{background:var(--color-primary-light);}
+
+.admin-btn--ghost{
+
+    background:transparent;
+
+    border-color:rgba(255,255,255,.15);
+
+    color:var(--color-white);
+
+}
+
+.admin-btn--ghost:hover{border-color:var(--color-primary);color:var(--color-primary);}
+
+.admin-btn--danger{
+
+    background:transparent;
+
+    border-color:var(--color-danger);
+
+    color:var(--color-danger);
+
+}
+
+.admin-btn--danger:hover{background:var(--color-danger);color:var(--color-white);}
+
+.admin-btn--sm{padding:7px 14px;font-size:.8rem;}
+
+/*==========================
+    ALERTAS
+==========================*/
+
+.admin-alert{
+
+    padding:12px 16px;
+
+    border-radius:8px;
+
+    font-size:.85rem;
+
+    margin-bottom:15px;
+
+}
+
+.admin-alert--ok{background:rgba(37,211,102,.12);color:var(--color-success);}
+.admin-alert--error{background:rgba(192,57,43,.15);color:#ff8f80;}
+
+/*==========================
+    LAYOUT DEL PANEL
+==========================*/
+
+.admin-topbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:18px 30px;
+
+    background:var(--color-card);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    flex-wrap:wrap;
+
+}
+
+.admin-topbar__brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+}
+
+.admin-topbar__brand span{color:var(--color-primary);}
+
+.admin-topbar__nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.admin-main{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:35px 20px 60px;
+
+}
+
+.admin-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.admin-header h1{font-size:1.6rem;}
+
+.admin-breadcrumb{
+
+    font-size:.85rem;
+
+    color:var(--color-gray-dark);
+
+    margin-bottom:10px;
+
+}
+
+.admin-breadcrumb a:hover{color:var(--color-primary);}
+
+/*==========================
+    TARJETAS DE CATEGORÍA
+==========================*/
+
+.admin-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    gap:20px;
+
+}
+
+.admin-card{
+
+    background:var(--color-card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius);
+
+    padding:24px;
+
+    transition:var(--transition);
+
+}
+
+.admin-card:hover{border-color:var(--color-primary);transform:translateY(-3px);}
+
+.admin-card i{color:var(--color-primary);font-size:1.4rem;margin-bottom:12px;display:block;}
+
+.admin-card h3{font-size:1.05rem;margin-bottom:6px;}
+
+.admin-card p{font-size:.8rem;color:var(--color-gray-dark);}
+
+/*==========================
+    TABLA DE ITEMS
+==========================*/
+
+.admin-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:var(--color-card);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+}
+
+.admin-table th,
+.admin-table td{
+
+    padding:14px 16px;
+
+    text-align:left;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    font-size:.88rem;
+
+    vertical-align:top;
+
+}
+
+.admin-table th{
+
+    color:var(--color-primary);
+
+    text-transform:uppercase;
+
+    font-size:.75rem;
+
+    letter-spacing:.5px;
+
+}
+
+.admin-table tr:last-child td{border-bottom:none;}
+
+.admin-table__price{color:var(--color-primary);font-weight:700;white-space:nowrap;}
+
+.admin-table__note{color:var(--color-gray-dark);font-size:.78rem;}
+
+.admin-table__actions{display:flex;gap:8px;white-space:nowrap;}
+
+.admin-table__empty td{text-align:center;color:var(--color-gray-dark);padding:30px;}
+
+.admin-subhead td{
+
+    background:rgba(190,155,89,.08);
+
+    color:var(--color-primary);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    font-size:.75rem;
+
+    letter-spacing:.5px;
+
+}
+
+/*==========================
+    FORMULARIO DE ITEM
+==========================*/
+
+.admin-form{
+
+    background:var(--color-card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    max-width:600px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.admin-form label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    font-size:.85rem;
+
+    color:var(--color-gray);
+
+}
+
+.admin-form__row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.admin-form__actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+.admin-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:20px;
+
+}
+
+@media (max-width:600px){
+
+    .admin-form__row{grid-template-columns:1fr;}
+    .admin-topbar{padding:15px 20px;}
+    .admin-table{font-size:.8rem;}
+    .admin-table th,.admin-table td{padding:10px;}
+
+}
