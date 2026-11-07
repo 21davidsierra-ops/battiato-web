@@ -1,33 +1,3 @@
-# Guía de instalación — Restaurante Bar Battiato
-### Del cero a tener el sitio funcionando con base de datos
-
-Esta guía asume que **nunca has hecho esto antes**. Vamos a instalar
-un programa, copiar archivos, crear una base de datos y probar el
-sitio. Sigue los pasos en orden, sin saltarte ninguno.
-
----
-
-## 0. ¿Qué es lo que vamos a armar?
-
-Hasta ahora tenías un sitio web hecho solo de HTML y CSS: archivos
-que el navegador abre directamente y ya. Eso funciona para mostrar
-contenido fijo, pero si querías cambiar un precio, tenías que editar
-el código.
-
-Ahora el sitio tiene tres piezas que trabajan juntas:
-
-| Pieza | Qué es | Dónde vive |
-|---|---|---|
-| **MySQL** | La base de datos: una tabla gigante donde se guardan los productos y precios | Dentro de XAMPP |
-| **PHP** | El "traductor": lee la base de datos y arma el HTML que ve el visitante | Los archivos `.php` del proyecto |
-| **El navegador** | Muestra el resultado final | Chrome, Edge, etc. |
-
-Por eso ya no basta con abrir `index.php` haciendo doble clic — un
-archivo `.php` **necesita un servidor** que lo interprete. Ese
-servidor (y la base de datos) te los da **XAMPP**.
-
----
-
 ## 1. Instalar XAMPP
 
 1. Entra a **https://www.apachefriends.org**
