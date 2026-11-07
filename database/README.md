@@ -109,23 +109,3 @@ Los cambios que hagas en el panel se ven reflejados de inmediato en
 la sección de precios de cada categoría, y en la grilla de tamaños de
 Pizza Plazza.
 
-## Si algo no conecta
-
-Revisa `config/database.php`. Los valores por defecto (`localhost`,
-usuario `root`, contraseña vacía) son los que trae XAMPP de fábrica.
-Si tu instalación es distinta, ajusta esos valores ahí.
-
-## Cuando subas esto a un hosting real
-
-La mayoría de hostings compartidos (los que traen cPanel) también
-usan PHP + MySQL, así que el proceso es el mismo:
-
-1. Crear la base de datos y un usuario MySQL desde el panel del
-   hosting (te van a dar host, usuario, contraseña y nombre de base
-   de datos).
-2. Actualizar esos datos en `config/database.php`.
-3. Importar `database/schema.sql` desde el phpMyAdmin del hosting.
-4. Subir todos los archivos por FTP o el administrador de archivos
-   del hosting.
-5. Correr `admin/setup.php` una vez y luego borrarlo, igual que en
-   local.
