@@ -1,0 +1,8 @@
+Coloca aquí los artefactos de tus evidencias anteriores que no se generan desde el código:
+
+  - Prototipos y diseños (imágenes o PDF)
+  - Informe técnico del plan de trabajo para la construcción de software
+  - Cualquier otro diagrama que ya hayas entregado
+
+La evidencia pide tener en cuenta esos artefactos para codificar el módulo;
+al incluirlos en el repositorio quedan como prueba de que se siguieron.

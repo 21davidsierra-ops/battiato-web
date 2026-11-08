@@ -1,0 +1,7 @@
+# Normaliza los saltos de línea (evita mezclar CRLF de Windows con LF)
+* text=auto eol=lf
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary

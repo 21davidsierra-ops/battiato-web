@@ -1,0 +1,14 @@
+# Credenciales reales de la base de datos (NO subir)
+config/database.php
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Archivos temporales y copias de respaldo
+*.bak
+*.log
+*.tmp
+node_modules/
